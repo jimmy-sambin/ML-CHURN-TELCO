@@ -167,7 +167,7 @@ compétition dans [`data/description_dataset.txt`](data/description_dataset.txt)
 
 * **Compétition** : [Customer Churn Prediction 2023](https://www.kaggle.com/competitions/customer-churn-prediction-2023) — Kaggle
 * **Dataset** : IBM Telco Customer Churn
-* **Portfolio** : [github.com/jimmy-sambi](https://github.com/jimmy-sambi) — voir aussi [ML-PANNES-CVC](https://github.com/jimmy-sambin/ML-PANNES-CVC)
+* **Portfolio** : [github.com/jimmy-sambin](https://github.com/jimmy-sambin) — voir aussi [ML-PANNES-CVC](https://github.com/jimmy-sambin/ML-PANNES-CVC)
 
 ## Licence
 
