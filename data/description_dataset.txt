@@ -1,0 +1,65 @@
+DESCRIPTION DES DONNEES - Customer Churn Prediction 2023 (Kaggle)
+==================================================================
+
+Competition : https://www.kaggle.com/competitions/customer-churn-prediction-2023
+Source      : dataset IBM "Telco Customer Churn" (telecommunications)
+Objectif    : predire si un client va resilier (churn) le mois suivant
+
+CONTEXTE (extrait de la competition)
+------------------------------------
+L'operateur telecom Telco veut comprendre les facteurs de resiliation et
+predire le churn du mois suivant pour deployer des interventions ciblees
+(promotions, offres de retention) sur les clients predits partants.
+
+VOLUMETRIE
+----------
+7 043 clients historiques, decrits par 21 variables.
+- train.csv : 5 641 clients AVEC l'outcome Churn (entrainement)
+- test.csv  : 1 402 clients SANS l'outcome (a predire, soumission Kaggle)
+- Metrique  : classification ACCURACY (bonnes predictions / total)
+- Soumission: 2 colonnes (customerID, Churn en 0/1)
+- Reference classe majoritaire (sans modele) : ~73,5 % de precision
+  (baseline a battre)
+
+DICTIONNAIRE DES 21 VARIABLES (dataset IBM Telco)
+-------------------------------------------------
+#   Variable           Type        Description
+1   customerID         texte       Identifiant unique du client
+2   gender             categoriel  Male / Female
+3   SeniorCitizen      binaire     1 si client senior (65+), sinon 0
+4   Partner            categoriel  Client marie/partenaire : Yes / No
+5   Dependents         categoriel  Personnes a charge : Yes / No
+6   tenure             entier      Anciennete en mois (0 a 72)
+7   PhoneService       categoriel  Abonnement telephonie : Yes / No
+8   MultipleLines      categoriel  Lignes multiples : Yes / No / No phone service
+9   InternetService    categoriel  Type internet : DSL / Fiber optic / No
+10  OnlineSecurity     categoriel  Securite en ligne : Yes / No / No internet
+11  OnlineBackup       categoriel  Sauvegarde en ligne : Yes / No / No internet
+12  DeviceProtection   categoriel  Protection appareils : Yes / No / No internet
+13  TechSupport        categoriel  Support technique : Yes / No / No internet
+14  StreamingTV        categoriel  TV en streaming : Yes / No / No internet
+15  StreamingMovies    categoriel  Films en streaming : Yes / No / No internet
+16  Contract           categoriel  Type de contrat : Month-to-month /
+                                   One year / Two year
+17  PaperlessBilling   categoriel  Facture dematerialisee : Yes / No
+18  PaymentMethod      categoriel  Mode de paiement : Electronic check /
+                                   Mailed check / Bank transfer (automatic) /
+                                   Credit card (automatic)
+19  MonthlyCharges    continu      Facture mensuelle (18,25 a 118,75 $)
+20  TotalCharges      continu      Total facture a ce jour (= tenure x
+                                   MonthlyCharges environ)
+21  Churn              binaire     CIBLE : 1 = resiliation, 0 = fidelite
+
+FACTEURS DE CHURN CONNUS (analyse du dataset IBM)
+-------------------------------------------------
+- Contract Month-to-month     : taux de churn ~3x superieur aux contrats annuels
+- tenure faible (0-6 mois)    : zone de risque maximale (clients recents)
+- InternetService Fiber optic : taux de churn plus eleve que DSL
+- Electronic check            : mode de paiement le plus "churner"
+- absence d'OnlineSecurity/TechSupport : correlé au churn
+
+NOTE
+----
+Les fichiers train.csv / test.csv (a telecharger depuis la page Kaggle) sont a
+deposer dans ce dossier data/ ; ils ne sont pas inclus ici (taille/licence
+Kaggle). La structure du projet est prete pour l'entrainement.

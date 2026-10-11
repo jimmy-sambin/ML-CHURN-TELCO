@@ -1,0 +1,31 @@
+============================================================
+CUSTOMER CHURN PREDICTION - Modele XGBoost
+============================================================
+Donnees              : 7043 clients, 19 features
+Train / Test         : 5641 / 1402 (comme la competition)
+Churn rate (train)   : 26.5 %
+
+--- Performances sur le holdout (1 402 clients) ---
+Accuracy             : 75.11 %   (baseline naive : 73.47 %)
+AUC                  : 0.8351
+Precision (churn=1)  : 0.5211
+Recall (churn=1)     : 0.7634
+F1-score (churn=1)   : 0.6194
+
+--- Matrice de confusion ---
+Vrais negatifs  (TN) : 769
+Faux positifs  (FP)  : 261
+Faux negatifs  (FN)  : 88
+Vrais positifs  (TP) : 284
+
+--- Top 10 variables les plus importantes ---
+Contract_Two year                        0.2618
+InternetService_Fiber optic              0.1468
+Contract_One year                        0.1166
+InternetService_No                       0.0905
+OnlineSecurity_No internet service       0.0568
+PaymentMethod_Electronic check           0.0410
+StreamingMovies_Yes                      0.0300
+tenure                                   0.0236
+MultipleLines_No phone service           0.0215
+OnlineSecurity_Yes                       0.0188

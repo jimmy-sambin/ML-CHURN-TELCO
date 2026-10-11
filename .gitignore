@@ -1,0 +1,16 @@
+# Code Python (local uniquement - non publie)
+model_xgboost.py
+chk.py
+*.py
+venv/
+__pycache__/
+*.pyc
+
+# Scripts MATLAB (local uniquement - non publie)
+scripts_matlab/
+
+# Journaux et fichiers systeme
+matlab_log.txt
+Thumbs.db
+.DS_Store
+commit_msg.txt  
